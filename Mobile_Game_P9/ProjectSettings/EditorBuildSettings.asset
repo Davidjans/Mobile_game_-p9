@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/David/TestScene.unity
-    guid: c0cbbd7a339271f49bd190f78b71cd6e
+    path: Assets/Yari/Scenes/AccelerometerTestScene.unity
+    guid: 9d5dbb0a136b14e45a8560ae662c224e
   m_configObjects: {}
