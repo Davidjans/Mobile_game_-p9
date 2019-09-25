@@ -10,6 +10,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         m_EnemyNavMesh = GetComponent<NavMeshAgent>();
+        m_EnemyGoal = GameObject.Find("End").GetComponent<Transform>();
         m_EnemyNavMesh.destination = m_EnemyGoal.position;
     }
 }
