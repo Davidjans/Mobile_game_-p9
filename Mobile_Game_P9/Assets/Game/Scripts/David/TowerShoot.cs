@@ -45,22 +45,26 @@ public class TowerShoot : MonoBehaviour
         }
         m_TowerTarget = null;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_Range);
+        
         int closestEnemy = -1;
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            for (int enemies = 0; enemies < m_MatchManager.m_Enemies.Count; enemies++)
+            if (hitColliders[i].gameObject.CompareTag("Enemy"))
             {
-                if (hitColliders[i].gameObject == m_MatchManager.m_Enemies[enemies].gameObject)
+                for (int enemies = 0; enemies < m_MatchManager.m_Enemies.Count; enemies++)
                 {
-                    if(closestEnemy == -1)
+                    if (hitColliders[i].gameObject == m_MatchManager.m_Enemies[enemies].gameObject)
                     {
-                        closestEnemy = enemies;
-                    }
-                    else
-                    {
-                        if(m_MatchManager.m_EnemyNavMesh[enemies].remainingDistance < m_MatchManager.m_EnemyNavMesh[closestEnemy].remainingDistance)
+                        if (closestEnemy == -1)
                         {
                             closestEnemy = enemies;
+                        }
+                        else
+                        {
+                            if (m_MatchManager.m_EnemyNavMesh[enemies].remainingDistance < m_MatchManager.m_EnemyNavMesh[closestEnemy].remainingDistance)
+                            {
+                                closestEnemy = enemies;
+                            }
                         }
                     }
                 }
