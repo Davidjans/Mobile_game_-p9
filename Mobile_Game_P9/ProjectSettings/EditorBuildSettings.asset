@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Yari/Scenes/AccelerometerTestScene.unity
+  - enabled: 0
+    path: Assets/Game/Yari/Scenes/AccelerometerTestScene.unity
     guid: 9d5dbb0a136b14e45a8560ae662c224e
+  - enabled: 1
+    path: Assets/Game/Scenes/David/TestScene.unity
+    guid: c0cbbd7a339271f49bd190f78b71cd6e
   m_configObjects: {}
