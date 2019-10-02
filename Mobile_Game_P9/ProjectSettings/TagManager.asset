@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EmptyFloor
   - EmptyPlatform
+  - Enemy
   layers:
   - Default
   - TransparentFX

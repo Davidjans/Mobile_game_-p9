@@ -10,12 +10,14 @@ public class EditorUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_MoneyText;
     [SerializeField] private TextMeshProUGUI m_PlatformText;
     [SerializeField] private TextMeshProUGUI m_CostText;
+    [SerializeField] private TextMeshProUGUI m_LifesText;
     [SerializeField] private MatchManager m_MatchManager;
     // Update is called once per frame
     void Update()
     {
         m_MoneyText.text = m_MatchManager.m_Money.ToString();
         m_PlatformText.text = m_MatchManager.m_Platforms.ToString();
+        m_LifesText.text = m_MatchManager.m_Health.ToString();
         if (m_MatchManager.m_CurrentTower == 0)
         {
             m_CostText.text = m_MatchManager.m_Towers[m_MatchManager.m_CurrentTower].m_TowerCost.ToString() + " Platform";
