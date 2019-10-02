@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf5c90fe8bd3334d80ad6f4a4fb0c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraShake: {fileID: 2016453758}
+  cameraShake: {fileID: 0}
   text: {fileID: 286579534}
   shakeSensitivty: 1
 --- !u!54 &1370179600
@@ -997,7 +997,9 @@ GameObject:
   - component: {fileID: 2016453757}
   - component: {fileID: 2016453756}
   - component: {fileID: 2016453755}
+  - component: {fileID: 2016453761}
   - component: {fileID: 2016453758}
+  - component: {fileID: 2016453762}
   - component: {fileID: 2016453760}
   - component: {fileID: 2016453759}
   m_Layer: 0
@@ -1081,7 +1083,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2016453754}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35f23f0f7c470fc4aa0e8019d3cce1ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 3885263c0c35c784cb180d710b22f8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2016453759
@@ -1161,3 +1163,27 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &2016453761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016453754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35f23f0f7c470fc4aa0e8019d3cce1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2016453762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016453754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91437481ecf86240898f0ad3b96019f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
