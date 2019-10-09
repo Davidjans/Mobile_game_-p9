@@ -19,23 +19,23 @@ public class Accelerometer : MonoBehaviour
 
     void Update()
     {
-        //Vector3 tilt = Input.acceleration;
+        Vector3 tilt = Input.acceleration;
 
-        //tilt = Quaternion.Euler(90, 0, 0) * tilt;
+        tilt = Quaternion.Euler(90, 0, 0) * tilt;
 
-        //rb.AddForce(tilt, ForceMode.Acceleration);
+        rb.AddForce(tilt, ForceMode.Acceleration);
 
-        //if (tilt.x > shakeSensitivty || tilt.x < shakeSensitivty * -1f)
-        //{
-        //    text.text = "SHAKE X";
-        //    StartCoroutine(cameraShake.Shake(.15f, .4f));
-        //}
+        if (tilt.x > shakeSensitivty || tilt.x < shakeSensitivty * -1f)
+        {
+            text.text = "SHAKE X";
+            StartCoroutine(cameraShake.Shake(.15f, .4f));
+        }
 
-        //if (tilt.z > shakeSensitivty || tilt.z < shakeSensitivty * -1f)
-        //{
-        //    text.text = "SHAKE Z";
-        //    StartCoroutine(cameraShake.Shake(.15f, .4f));
-        //}
+        if (tilt.z > shakeSensitivty || tilt.z < shakeSensitivty * -1f)
+        {
+            text.text = "SHAKE Z";
+            StartCoroutine(cameraShake.Shake(.15f, .4f));
+        }
 
         //Debug Code
         if (Input.GetKey(KeyCode.Space))
