@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d044cbbc2f4a1b4e8c33d3360211152, type: 3}
-  m_Name: Wave 1
+  m_Name: Wave 3
   m_EditorClassIdentifier: 
   m_EnemyPrefabs:
   - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
@@ -28,5 +28,19 @@ MonoBehaviour:
   - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
   - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
   - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
-  m_TimeBetweenSpawns: 2
-  m_PlatformsGained: 2
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  - {fileID: 613136617971962234, guid: 6da79ededb773724286adc7359ba86ea, type: 3}
+  m_TimeBetweenSpawns: 1
+  m_PlatformsGained: 4

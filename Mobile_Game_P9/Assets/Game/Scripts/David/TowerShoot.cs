@@ -40,6 +40,7 @@ public class TowerShoot : MonoBehaviour
         if(m_TowerTarget != null)
         {
             Debug.Log("rood");
+            if(m_Block != null)
             m_Block.SetColor("_BaseColor", Color.green);
             m_TowerTarget.GetComponent<Renderer>().SetPropertyBlock(m_Block);
         }
@@ -73,6 +74,7 @@ public class TowerShoot : MonoBehaviour
         
         if(closestEnemy != -1) {
             m_TowerTarget = m_MatchManager.m_Enemies[closestEnemy].transform;
+            if(m_Block != null)
             m_Block.SetColor("_BaseColor", Color.blue);
             m_TowerTarget.GetComponent<Renderer>().SetPropertyBlock(m_Block);
         }

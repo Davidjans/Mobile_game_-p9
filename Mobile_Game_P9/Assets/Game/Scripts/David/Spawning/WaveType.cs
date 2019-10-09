@@ -9,7 +9,8 @@ public class WaveType : ScriptableObject
     public List<GameObject> m_EnemyPrefabs;
     [Tooltip("The ammount of seconds between enemy spawns.")]
     public float m_TimeBetweenSpawns;
-
+    [Tooltip("The ammount of platforms gained after completing the wave.")]
+    public int m_PlatformsGained;
     private void Awake()
     {
         

@@ -32,6 +32,7 @@ public class MatchManager : MonoBehaviour
 
     private void CheckWhoIsFarthest()
     {
+        m_DistanceToEnd.Clear();
         for (int i = 0; i < m_EnemyNavMesh.Count; i++)
         {
             m_DistanceToEnd.Add(m_EnemyNavMesh[i].remainingDistance);

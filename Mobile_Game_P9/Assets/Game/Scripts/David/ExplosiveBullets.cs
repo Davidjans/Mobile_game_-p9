@@ -48,7 +48,7 @@ public class ExplosiveBullets : MonoBehaviour
         {
             if (hitColliders[i].gameObject.CompareTag("Enemy"))
             {
-                hitColliders[i].GetComponent<EnemyHealth>().GetHit(m_BulletDamage);
+                hitColliders[i].GetComponent<EnemyHealth>().TakeDamage(m_BulletDamage);
             }
         }
 

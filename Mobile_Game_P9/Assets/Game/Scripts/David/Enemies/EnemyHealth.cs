@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    public void GetHit(float damage)
+    public void TakeDamage(float damage)
     {
         m_CurrentHealth -= damage;
     }
