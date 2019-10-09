@@ -37,6 +37,7 @@ public class Accelerometer : MonoBehaviour
             StartCoroutine(cameraShake.Shake(.15f, .4f));
         }
 
+        //Debug Code
         if (Input.GetKey(KeyCode.Space))
         {
             StartCoroutine(cameraShake.Shake(.15f, .4f));
