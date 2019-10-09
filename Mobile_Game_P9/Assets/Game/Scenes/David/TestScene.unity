@@ -11327,11 +11327,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerFloor
       objectReference: {fileID: 0}
-    - target: {fileID: 1107017553061572595, guid: 93c7713229ccefa429a1d462cf11242e,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 8451867686265234528, guid: 93c7713229ccefa429a1d462cf11242e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11385,16 +11380,6 @@ PrefabInstance:
     - target: {fileID: 8451867686265234528, guid: 93c7713229ccefa429a1d462cf11242e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5659260930877086677, guid: 93c7713229ccefa429a1d462cf11242e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 24161047738599591, guid: 93c7713229ccefa429a1d462cf11242e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -29273,7 +29258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e058a463f717e3741b0ac8e60963c90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Money: 100
+  m_Money: 2000
   m_Platforms: 4
   m_Towers:
   - {fileID: 11400000, guid: 82d4a51e21efab74db48956705b9f1c1, type: 2}

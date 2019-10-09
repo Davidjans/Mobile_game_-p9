@@ -13,6 +13,7 @@ public class TowerShoot : MonoBehaviour
     [SerializeField] private float m_BulletDamage;
     [SerializeField] private GameObject m_Bullet;
     [SerializeField] private Transform m_SpawnLocation;
+    [SerializeField] private bool m_FollowTarget;
 
     private float m_FireRateTimer;
     private MatchManager m_MatchManager;
@@ -32,7 +33,18 @@ public class TowerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FollowTarget();
         Shoot();
+    }
+
+    private void FollowTarget()
+    {
+        if(m_TowerTarget != null && m_FollowTarget)
+        {
+            Quaternion oldRotation = new Quaternion();
+            transform.LookAt(m_TowerTarget);
+            transform.rotation = new Quaternion(oldRotation.x, transform.rotation.y, oldRotation.z, transform.rotation.w);
+        }
     }
 
     private void UpdateTarget()
