@@ -57,7 +57,6 @@ public class PinchAndPan : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             Vector3 direction = touchStart - GetWorldPosition(groundZ);
-            //camHolder.transform.position.x += direction.x;
         }
     }
 
@@ -65,7 +64,7 @@ public class PinchAndPan : MonoBehaviour
     {
         Ray mousePos = cam.ScreenPointToRay(Input.mousePosition);
 
-        Plane ground = new Plane(Vector3.forward, new Vector3(0, 0, z));
+        Plane ground = new Plane(Vector3.forward, new Vector3(0, z, 0));
 
         float distance;
         ground.Raycast(mousePos, out distance);
