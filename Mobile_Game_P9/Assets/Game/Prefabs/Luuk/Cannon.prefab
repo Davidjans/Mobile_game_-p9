@@ -127,7 +127,7 @@ MonoBehaviour:
   m_FireRate: 1.5
   m_BulletSpeed: 70
   m_BulletDamage: 5
-  m_Bullet: {fileID: 2229362156093424734, guid: c5ce156b2a77bbd4f97a637bb0d777dd,
+  m_Bullet: {fileID: 2229362156093424734, guid: fc3d384b25cba0e4d8962e3189bcbf91,
     type: 3}
   m_SpawnLocation: {fileID: 6157181551727246831}
   m_FollowTarget: 1
