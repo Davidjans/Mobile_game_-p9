@@ -29258,7 +29258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e058a463f717e3741b0ac8e60963c90a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Money: 2000
+  m_Money: 100
   m_Platforms: 4
   m_Towers:
   - {fileID: 11400000, guid: 82d4a51e21efab74db48956705b9f1c1, type: 2}
