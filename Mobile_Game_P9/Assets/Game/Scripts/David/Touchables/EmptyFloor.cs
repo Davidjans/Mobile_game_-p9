@@ -47,15 +47,15 @@ public class EmptyFloor : MonoBehaviour
         {
             m_ValidCheckPlatform.SetActive(true);
             m_Clickedon = true;
-            
+            Destroy(GetComponent<Collider>());
         }
     }
 
-    private void OnMouseOver()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Touched();
-        }
-    }
+    //private void OnMouseOver()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        Touched();
+    //    }
+    //}
 }
