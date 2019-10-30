@@ -49,14 +49,19 @@ public class PinchAndPan : MonoBehaviour
         }
 
         //Panning
-        if (Input.GetMouseButtonDown(0))
-        {            
-            touchStart = GetWorldPosition(groundZ);            
-        }
-
-        if (Input.GetMouseButton(0))
+        if(Input.touchCount < 2)
         {
-            Vector3 direction = touchStart - GetWorldPosition(groundZ);
+            if (Input.GetMouseButtonDown(0))
+            {
+                touchStart = GetWorldPosition(groundZ);
+                Debug.Log(touchStart);
+            }
+
+            if (Input.GetMouseButton(0))
+            {
+                Vector3 direction = touchStart - GetWorldPosition(groundZ);
+                camHolder.transform.position += direction;
+            }
         }
     }
 
