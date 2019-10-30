@@ -7,6 +7,7 @@ TagManager:
   - EmptyFloor
   - EmptyPlatform
   - Enemy
+  - Bomb
   layers:
   - Default
   - TransparentFX

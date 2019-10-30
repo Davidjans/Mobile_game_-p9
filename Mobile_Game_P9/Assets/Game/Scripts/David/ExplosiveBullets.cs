@@ -7,6 +7,7 @@ public class ExplosiveBullets : MonoBehaviour
     private float m_BulletSpeed = 70f;
     private float m_BulletDamage = 5f;
     [SerializeField] private GameObject m_HitImpact;
+    [SerializeField] private GameObject m_SFX;
     [SerializeField] private float m_ExplosiveRange = 0.5f;
 
     private Transform m_Target;
@@ -42,7 +43,7 @@ public class ExplosiveBullets : MonoBehaviour
     private void HitTarget()
     {
         GameObject bullet = Instantiate(m_HitImpact, transform.position, transform.rotation);
-
+        GameObject SFX = Instantiate(m_SFX, transform.position, transform.rotation);
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_ExplosiveRange);
         for (int i = 0; i < hitColliders.Length; i++)
         {
@@ -51,7 +52,6 @@ public class ExplosiveBullets : MonoBehaviour
                 hitColliders[i].GetComponent<EnemyHealth>().TakeDamage(m_BulletDamage);
             }
         }
-
         Destroy(gameObject);
     }
 }

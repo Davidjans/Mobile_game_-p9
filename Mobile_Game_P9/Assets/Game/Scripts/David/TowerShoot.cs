@@ -105,7 +105,15 @@ public class TowerShoot : MonoBehaviour
             if(m_FireRateTimer <= 0)
             {
                 GameObject bullet = Instantiate(m_Bullet, m_SpawnLocation.position, m_SpawnLocation.rotation);
-                bullet.GetComponent<Bullet>().Spawn(m_TowerTarget, m_BulletSpeed, m_BulletDamage);
+                if (bullet.CompareTag("Bomb"))
+                {
+                    bullet.GetComponent<ExplosiveBullets>().Spawn(m_TowerTarget, m_BulletSpeed, m_BulletDamage);
+                }
+                else
+                {
+                    bullet.GetComponent<Bullet>().Spawn(m_TowerTarget, m_BulletSpeed, m_BulletDamage);
+                }
+               
                 m_FireRateTimer = m_FireRate;
             }
         }
