@@ -27,7 +27,6 @@ public class TowerShoot : MonoBehaviour
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         m_MatchManager = GameObject.Find("MatchManager").GetComponent<MatchManager>();
-        m_Block = new MaterialPropertyBlock();
     }
 
     // Update is called once per frame
@@ -49,13 +48,6 @@ public class TowerShoot : MonoBehaviour
 
     private void UpdateTarget()
     {
-        if(m_TowerTarget != null)
-        {
-            Debug.Log("rood");
-            if(m_Block != null)
-            m_Block.SetColor("_BaseColor", Color.green);
-            m_TowerTarget.GetComponent<Renderer>().SetPropertyBlock(m_Block);
-        }
         m_TowerTarget = null;
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, m_Range);
         
@@ -86,16 +78,13 @@ public class TowerShoot : MonoBehaviour
         
         if(closestEnemy != -1) {
             m_TowerTarget = m_MatchManager.m_Enemies[closestEnemy].transform;
-            if(m_Block != null)
-            m_Block.SetColor("_BaseColor", Color.blue);
-            m_TowerTarget.GetComponent<Renderer>().SetPropertyBlock(m_Block);
         }
     }
     void OnDrawGizmosSelected()
     {
         // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(transform.position, 3);
+        Gizmos.DrawSphere(transform.position, m_Range);
     }
     private void Shoot()
     {
