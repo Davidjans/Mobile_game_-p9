@@ -8,6 +8,7 @@ public class PinchAndPan : MonoBehaviour
     [SerializeField] private GameObject camHolder;
 
     private Camera cam;
+    private Vector3 camHolderPos;
 
     private Vector3 touchStart;
 
@@ -54,14 +55,16 @@ public class PinchAndPan : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 touchStart = GetWorldPosition(groundZ);
-                Debug.Log(touchStart);
             }
 
             if (Input.GetMouseButton(0))
             {
-                Vector3 direction = touchStart - GetWorldPosition(groundZ);
-                camHolder.transform.position += direction;
+                Vector3 direction = touchStart - GetWorldPosition(groundZ);                
+
+                camHolder.transform.position += new Vector3(direction.x, 0, direction.y);
             }
+
+            
         }
     }
 
@@ -69,7 +72,7 @@ public class PinchAndPan : MonoBehaviour
     {
         Ray mousePos = cam.ScreenPointToRay(Input.mousePosition);
 
-        Plane ground = new Plane(Vector3.forward, new Vector3(0, z, 0));
+        Plane ground = new Plane(camHolder.transform.forward, new Vector3(0, z, 0));
 
         float distance;
         ground.Raycast(mousePos, out distance);
