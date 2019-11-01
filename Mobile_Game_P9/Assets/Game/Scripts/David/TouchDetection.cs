@@ -10,8 +10,6 @@ public class TouchDetection : MonoBehaviour
     [SerializeField] private Material m_Floor;
     [SerializeField] private Material m_SelectedCastle;
     [SerializeField] private Material m_Castle;
-    [SerializeField] TextMeshProUGUI m_Debug1;
-    [SerializeField] TextMeshProUGUI m_Debug2;
     // Update is called once per frame
     void Update()
     {
@@ -23,18 +21,15 @@ public class TouchDetection : MonoBehaviour
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(touch.position);
                 Physics.Raycast(ray, out hit);
-                m_Debug1.text = hit.collider.tag;
                 if (hit.collider.tag == "EmptyFloor")
                 {
                     if (LastTouched != hit.collider.gameObject)
                     {
-                        m_Debug1.text = hit.collider.gameObject.name;
                         if(LastTouched != null)
                         {
                             LastTouched.GetComponent<MeshRenderer>().material = m_Floor;
                         }
                         LastTouched = hit.collider.gameObject;
-                        m_Debug2.text = LastTouched.name;
                         LastTouched.GetComponent<MeshRenderer>().material = m_SelectedFloor;
                     }
                     else if(LastTouched == hit.collider.gameObject){
