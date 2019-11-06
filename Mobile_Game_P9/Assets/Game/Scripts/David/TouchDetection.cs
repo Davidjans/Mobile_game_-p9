@@ -25,26 +25,28 @@ public class TouchDetection : MonoBehaviour
                 {
                     if (LastTouched != hit.collider.gameObject)
                     {
-                        if(LastTouched != null)
+                        if (LastTouched != null)
                         {
                             LastTouched.GetComponent<MeshRenderer>().material = m_Floor;
                         }
                         LastTouched = hit.collider.gameObject;
                         LastTouched.GetComponent<MeshRenderer>().material = m_SelectedFloor;
                     }
-                    else if(LastTouched == hit.collider.gameObject){
+                    else if (LastTouched == hit.collider.gameObject) {
                         LastTouched.GetComponent<MeshRenderer>().material = m_Floor;
                         hit.collider.gameObject.GetComponent<EmptyFloor>().Touched();
                         LastTouched = null;
                     }
                 }
-                if (hit.collider.tag == "EmptyPlatform")
+                if (hit.collider.tag == "EmptyPlatform" && (LastTouched == null || LastTouched.CompareTag("EmptyPlatform")))
                 {
                     Debug.Log(LastTouched);
                     if (LastTouched != hit.collider.gameObject)
                     {
-                        Debug.Log("shouldwork");
-                        LastTouched.GetComponent<MeshRenderer>().material = m_Castle;
+                        if (LastTouched != null)
+                        {
+                            LastTouched.GetComponent<MeshRenderer>().material = m_Castle;
+                        }
                         LastTouched = hit.collider.gameObject.GetComponent<GameObject>();
                         LastTouched.GetComponent<MeshRenderer>().material = m_SelectedCastle;
                     }

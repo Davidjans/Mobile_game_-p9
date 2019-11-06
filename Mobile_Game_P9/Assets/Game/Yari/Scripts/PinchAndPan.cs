@@ -6,6 +6,8 @@ public class PinchAndPan : MonoBehaviour
 {
     [SerializeField] private float perspectiveZoomSpeed = 0.5f, orthoZoomSpeed = 0.5f, groundZ = 0;
     [SerializeField] private GameObject camHolder;
+    [SerializeField] private Vector2 minMaxX;
+    [SerializeField] private Vector2 minMaxY;
 
     private Camera cam;
     private Vector3 camHolderPos;
@@ -62,9 +64,24 @@ public class PinchAndPan : MonoBehaviour
                 Vector3 direction = touchStart - GetWorldPosition(groundZ);                
 
                 camHolder.transform.position += new Vector3(direction.x, 0, direction.y);
-            }
+                if(camHolder.transform.position.x <= minMaxX.x)
+                {
+                    camHolder.transform.position = new Vector3(minMaxX.x, camHolder.transform.position.y, camHolder.transform.position.z);
+                }
+                if (camHolder.transform.position.x >= minMaxX.y)
+                {
+                    camHolder.transform.position = new Vector3(minMaxX.y, camHolder.transform.position.y, camHolder.transform.position.z);
+                }
 
-            
+                if (camHolder.transform.position.z <= minMaxY.x)
+                {
+                    camHolder.transform.position = new Vector3(camHolder.transform.position.x, camHolder.transform.position.y, minMaxY.x);
+                }
+                if (camHolder.transform.position.z >= minMaxY.y)
+                {
+                    camHolder.transform.position = new Vector3(camHolder.transform.position.x, camHolder.transform.position.y, minMaxY.y);
+                }
+            }
         }
     }
 
